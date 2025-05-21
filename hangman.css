@@ -17,6 +17,10 @@
   src: url(/fonts/coolstory\ regular.otf);
 }
 
+body {
+  background-image: url(/images/bg2.jpg);
+}
+
 h1 {
   font-family: mainFont;
   font-size: 150px;
