@@ -1,0 +1,115 @@
+:root {
+    --light-blue: #95BDC8;
+    --light-pink: #CDB1D7;
+    --light-purple: #CAAEE7;
+    --pink: #BD467E;
+    --red: #5B0C21;
+    --dark-blue: #113F60;
+}
+
+@font-face {
+  font-family: mainFont;
+  src: url(/fonts/AliceInWonderland-z051.ttf);
+}
+
+@font-face {
+  font-family: alice;
+  src: url(/fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: coolStory;
+  src: url(/fonts/coolstory\ regular.otf);
+}
+
+body{
+    background-image: url(/images/bg3.jpg);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+h1{
+    font-family: alice;
+    font-size: 50px;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 8rem;
+}
+
+h2{
+    font-family: alice;
+    font-size: 35px;
+    color: var(--red);
+}
+
+header{
+    align-self: flex-start;
+}
+
+.border{
+    background-color: var(--pink);
+    height: 5rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape{
+    background-color: var(--light-pink);
+    /* clip-path: polygon(0% 0%, 5% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%); */
+    /* clip-path: polygon(100% 100%, 0% 0%, 100% 0%, 0% 100%); */
+    height: 4rem;
+    width: 90%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    width: 40%;
+    justify-self: center;
+}
+
+section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+  width: 15rem;
+  height: 12rem;
+  font-family: coolStory;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 15px;
+  border: 8px solid var(--red);
+}
+
+#movies-btn{
+    color: var(--pink);
+    background-color: var(--light-blue);
+}
+
+#animals-btn{
+    color: var(--pink);
+    background-color: var(--dark-blue);
+}
+
+#countries-btn{
+    color: var(--light-pink);
+    background-color: var(--pink);
+}
+
+#mixed-btn{
+    color: var(--red);
+    background-color: var(--light-pink);
+}

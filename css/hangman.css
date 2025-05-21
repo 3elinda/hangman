@@ -1,0 +1,27 @@
+:root {
+    --light-blue: #95BDC8;
+    --light-pink: #CDB1D7;
+    --light-purple: #CAAEE7;
+    --pink: #BD467E;
+    --red: #5B0C21;
+    --dark-blue: #113F60;
+}
+
+@font-face {
+  font-family: mainFont;
+  src: url(/fonts/AliceInWonderland-z051.ttf);
+}
+
+@font-face {
+  font-family: alice;
+  src: url(/fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: coolStory;
+  src: url(/fonts/coolstory\ regular.otf);
+}
+
+body{
+    background-color: var(--dark-blue);
+}

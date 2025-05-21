@@ -1,6 +1,11 @@
-/* :root {
-    --main-color:;
-} */
+:root {
+    --light-blue: #95BDC8;
+    --light-pink: #CDB1D7;
+    --light-purple: #CAAEE7;
+    --pink: #BD467E;
+    --red: #5B0C21;
+    --dark-blue: #113F60;
+}
 
 @font-face {
   font-family: mainFont;
@@ -51,7 +56,13 @@ h1 {
   font-family: coolStory;
   font-weight: bold;
   font-size: 30px;
+  color: var(--red);
   padding: 3rem 2rem;
-  border: 5px solid black;
+  border: 5px solid var(--red);
   border-radius: 15px;
+  background-color: var(--light-pink);
+}
+
+a :hover{
+  cursor: pointer;
 }
