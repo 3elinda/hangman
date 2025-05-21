@@ -3,30 +3,30 @@
 } */
 
 @font-face {
-    font-family: mainFont;
-    src: url(/fonts/AliceInWonderland-z051.ttf);
+  font-family: mainFont;
+  src: url(/fonts/AliceInWonderland-z051.ttf);
 }
 
 @font-face {
-    font-family: alice;
-    src: url(/fonts/Alice-Regular.ttf);
+  font-family: alice;
+  src: url(/fonts/Alice-Regular.ttf);
 }
 
-@font-face{
-    font-family: coolStory;
-    src: url(/fonts/coolstory\ regular.otf);
+@font-face {
+  font-family: coolStory;
+  src: url(/fonts/coolstory\ regular.otf);
 }
 
-h1{
-    font-family: mainFont;
-    font-size: 150px;
+h1 {
+  font-family: mainFont;
+  font-size: 150px;
 }
 
-#play-me{
-    font-family: coolStory;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 1rem 2rem;
-    border: 5px solid black;
-    border-radius: 15px;
+#play-me {
+  font-family: coolStory;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 3rem 2rem;
+  border: 5px solid black;
+  border-radius: 15px;
 }
