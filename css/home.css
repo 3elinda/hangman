@@ -1,0 +1,57 @@
+/* :root {
+    --main-color:;
+} */
+
+@font-face {
+  font-family: mainFont;
+  src: url(/fonts/AliceInWonderland-z051.ttf);
+}
+
+@font-face {
+  font-family: alice;
+  src: url(/fonts/Alice-Regular.ttf);
+}
+
+@font-face {
+  font-family: coolStory;
+  src: url(/fonts/coolstory\ regular.otf);
+}
+
+body {
+  background-image: url(/images/bg2.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-image: url(/images/knave.png), url(/images/dodo.png),
+    url(/images/alice.png), url(/images/rabbit.png);
+  background-position: top left, top right, bottom left, bottom right;
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* border: 2px solid rebeccapurple; */
+  height: 95vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: mainFont;
+  font-size: 180px;
+}
+
+#play-me {
+  font-family: coolStory;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 3rem 2rem;
+  border: 5px solid black;
+  border-radius: 15px;
+}
