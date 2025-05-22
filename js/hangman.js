@@ -1,3 +1,17 @@
+// const list = [
+//   {
+//     word: "cat",
+//     hint: "feline"
+//   },
+//   {
+//     word: "spain",
+//     hint: "europe"
+//   }
+// ]
+
+// this keyword refers to an object
+// ex= this.movies
+
 const wordBank = {
   movies: [
     `frozen`,
@@ -12,6 +26,7 @@ const wordBank = {
     `tangled`,
     `aladdin`,
     `jaws`,
+    `pinocchio`
   ],
   animals: [
     `dolphin`,
@@ -23,6 +38,15 @@ const wordBank = {
     `peacock`,
     `ostrich`,
     `rabbit`,
+    `catepillar`,
+    `lizard`,
+    `hare`,
+    `dog`,
+    `canary`,
+    `owl`,
+    `mouse`,
+    `dodo`,
+    `lory`
   ],
   countries: [
     `egypt`,
@@ -48,5 +72,17 @@ const wordBank = {
     `rabbit`,
     `maze`,
     `turtle`,
-  ],
+    `spain`
+  ]
 };
+
+const word = document.querySelector(".word")
+const choiceMovies = document.getElementById("movies-btn");
+const image = document.querySelector(".section1")
+
+image.addEventListener("click", () => {
+  const newList = document.createElement("li");
+  newList.className = "letter";
+  newList.innerHTML = `h`;
+  word.appendChild(newList);
+});
