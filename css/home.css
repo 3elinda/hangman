@@ -1,10 +1,10 @@
 :root {
-    --light-blue: #95BDC8;
-    --light-pink: #CDB1D7;
-    --light-purple: #CAAEE7;
-    --pink: #BD467E;
-    --red: #5B0C21;
-    --dark-blue: #113F60;
+  --light-blue: #95bdc8;
+  --light-pink: #cdb1d7;
+  --light-purple: #caaee7;
+  --pink: #bd467e;
+  --red: #5b0c21;
+  --dark-blue: #113f60;
 }
 
 @font-face {
@@ -63,6 +63,6 @@ h1 {
   background-color: var(--light-pink);
 }
 
-a :hover{
+a :hover {
   cursor: pointer;
 }

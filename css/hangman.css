@@ -1,10 +1,10 @@
 :root {
-    --light-blue: #95BDC8;
-    --light-pink: #CDB1D7;
-    --light-purple: #CAAEE7;
-    --pink: #BD467E;
-    --red: #5B0C21;
-    --dark-blue: #113F60;
+  --light-blue: #95bdc8;
+  --light-pink: #cdb1d7;
+  --light-purple: #caaee7;
+  --pink: #bd467e;
+  --red: #5b0c21;
+  --dark-blue: #113f60;
 }
 
 @font-face {
@@ -22,6 +22,101 @@
   src: url(/fonts/coolstory\ regular.otf);
 }
 
-body{
-    background-color: var(--dark-blue);
+body {
+  background-color: var(--dark-blue);
 }
+
+h1 {
+  font-family: mainFont;
+  font-size: 100px;
+  display: flex;
+  margin: 0;
+  color: white;
+}
+
+h2 {
+  font-family: alice;
+  font-size: 35px;
+  color: var(--red);
+}
+
+.guesses h2 {
+  color: var(--light-pink);
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.border {
+  background-color: var(--pink);
+  clip-path: polygon(10% 0%, 90% 0%, 85% 50%, 90% 100%, 10% 100%, 0% 50%);
+  height: 5rem;
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.shape {
+  background-color: var(--light-pink);
+  clip-path: polygon(10% 0%, 90% 0%, 85% 50%, 90% 100%, 10% 100%, 0% 50%);
+  height: 4rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guesses {
+  margin-right: 2rem;
+}
+
+main {
+  background-image: url(/images/forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  display: flex;
+  margin: 0 2rem 4rem 2rem;
+}
+
+.section1 {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.keyboard {
+  width: 80%;
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  width: 5rem;
+  height: 4rem;
+  border-radius: 10px;
+  font-family: coolStory;
+  font-weight: bold;
+  font-size: 30px;
+  border: 5px solid var(--red);
+  background-color: var(--light-pink);
+}
+
+/* .lost {
+  background-color: var(--light-purple);
+  position: fixed;
+} */

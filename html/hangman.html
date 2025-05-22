@@ -1,57 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hangman</title>
-    <link rel="stylesheet" href="/css/hangman.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/hangman.css" />
+  </head>
+  <body>
+    <!-- <section class="won">
+      <h2>
+        Curiouser and Curiouser <br />
+        You won!
+      </h2>
+
+      <div class="answer">
+        <p>Correct answer:</p>
+        <p id="answer"></p>
+      </div>
+
+      <div class="border2">
+        <div class="shape2">
+          <h2>Try me again</h2>
+        </div>
+      </div>
+    </section> -->
+
     <header>
+      <a href="/html/options.html">
         <div class="border">
-            <div class="shape">
-                <h2>This way</h2>
-            </div>
+          <div class="shape">
+            <h2>This way</h2>
+          </div>
         </div>
-        <h1>category</h1>
-        <div class="guesses">
-            <h2>Incorrect Guesses:</h2>
-            <p></p>
-        </div>
+      </a>
+      <h1>category</h1>
+      <div class="guesses">
+        <h2>Incorrect Guesses:</h2>
+        <p>0/8</p>
+      </div>
     </header>
-    
+
     <main>
-        <section class=".section1"></section>
-        <section class="section2"></section>
+      <section class="section1">
+        <div class="hangman-box">
+          <img src="/images/rabbit.png" alt="hangman" />
+        </div>
+      </section>
+      <section class="section2">
+        <ul class="word">
+          <li class="letter"></li>
+        </ul>
+      </section>
     </main>
 
-    <section>
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-        <button>E</button>
-        <button>F</button>
-        <button>G</button>
-        <button>H</button>
-        <button>I</button>
-        <button>J</button>
-        <button>K</button>
-        <button>L</button>
-        <button>M</button>
-        <button>N</button>
-        <button>O</button>
-        <button>P</button>
-        <button>Q</button>
-        <button>R</button>
-        <button>S</button>
-        <button>T</button>
-        <button>U</button>
-        <button>V</button>
-        <button>W</button>
-        <button>X</button>
-        <button>Y</button>
-        <button>Z</button>
+    <section class="keyboard">
+      <button>A</button>
+      <button>B</button>
+      <button>C</button>
+      <button>D</button>
+      <button>E</button>
+      <button>F</button>
+      <button>G</button>
+      <button>H</button>
+      <button>I</button>
+      <button>J</button>
+      <button>K</button>
+      <button>L</button>
+      <button>M</button>
+      <button>N</button>
+      <button>O</button>
+      <button>P</button>
+      <button>Q</button>
+      <button>R</button>
+      <button>S</button>
+      <button>T</button>
+      <button>U</button>
+      <button>V</button>
+      <button>W</button>
+      <button>X</button>
+      <button>Y</button>
+      <button>Z</button>
     </section>
-</body>
+
+    <script src="/js/hangman.js"></script>
+  </body>
 </html>

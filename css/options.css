@@ -1,10 +1,10 @@
 :root {
-    --light-blue: #95BDC8;
-    --light-pink: #CDB1D7;
-    --light-purple: #CAAEE7;
-    --pink: #BD467E;
-    --red: #5B0C21;
-    --dark-blue: #113F60;
+  --light-blue: #95bdc8;
+  --light-pink: #cdb1d7;
+  --light-purple: #caaee7;
+  --pink: #bd467e;
+  --red: #5b0c21;
+  --dark-blue: #113f60;
 }
 
 @font-face {
@@ -22,69 +22,79 @@
   src: url(/fonts/coolstory\ regular.otf);
 }
 
-body{
-    background-image: url(/images/bg3.jpg);
-    /* display: flex;
+body {
+  background-image: url(/images/bg3.jpg);
+  /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
 }
 
-h1{
-    font-family: alice;
-    font-size: 50px;
-    display: flex;
-    justify-self: center;
-    margin-bottom: 8rem;
+h1 {
+  font-family: mainFont;
+  font-size: 100px;
+  display: flex;
+  justify-self: center;
+  margin-bottom: 6rem;
 }
 
-h2{
-    font-family: alice;
-    font-size: 35px;
-    color: var(--red);
+h2 {
+  font-family: alice;
+  font-size: 35px;
+  color: var(--red);
 }
 
-header{
-    align-self: flex-start;
+header {
+  align-self: flex-start;
 }
 
-.border{
-    background-color: var(--pink);
-    height: 5rem;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.border {
+  background-color: var(--pink);
+  clip-path: polygon(10% 0%, 90% 0%, 85% 50%, 90% 100%, 10% 100%, 0% 50%);
+  height: 5rem;
+  /* width: 20%; */
+  width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
-.shape{
-    background-color: var(--light-pink);
-    /* clip-path: polygon(0% 0%, 5% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%); */
-    /* clip-path: polygon(100% 100%, 0% 0%, 100% 0%, 0% 100%); */
-    height: 4rem;
-    width: 90%;
+.shape {
+  background-color: var(--light-pink);
+  clip-path: polygon(10% 0%, 90% 0%, 85% 50%, 90% 100%, 10% 100%, 0% 50%);
+  height: 4rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50vh;
-    width: 40%;
-    justify-self: center;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+  width: 40%;
+  justify-self: center;
 }
 
-section{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-button{
+a :hover {
+  cursor: pointer;
+}
+
+button {
   width: 15rem;
   height: 12rem;
   font-family: coolStory;
@@ -94,22 +104,22 @@ button{
   border: 8px solid var(--red);
 }
 
-#movies-btn{
-    color: var(--pink);
-    background-color: var(--light-blue);
+#movies-btn {
+  color: var(--pink);
+  background-color: var(--light-blue);
 }
 
-#animals-btn{
-    color: var(--pink);
-    background-color: var(--dark-blue);
+#animals-btn {
+  color: var(--pink);
+  background-color: var(--dark-blue);
 }
 
-#countries-btn{
-    color: var(--light-pink);
-    background-color: var(--pink);
+#countries-btn {
+  color: var(--light-pink);
+  background-color: var(--pink);
 }
 
-#mixed-btn{
-    color: var(--red);
-    background-color: var(--light-pink);
+#mixed-btn {
+  color: var(--red);
+  background-color: var(--light-pink);
 }
