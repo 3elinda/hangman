@@ -67,7 +67,6 @@ const wordBank = {
 
 const word = document.querySelector(".word");
 const choiceMovies = document.getElementById("movies-btn");
-const image = document.querySelector(".section1");
 
 document.querySelectorAll(".buttons").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -100,7 +99,20 @@ if (chosenWord) {
     newList.innerHTML = `${letter}`;
     word.appendChild(newList);
   }
+  // showLetters();
 }
+
+// function showLetters() {
+// const keyLetters = document.querySelectorAll(".key-letter");
+
+// keyLetters.forEach((keyLetter) => {
+//   keyLetter.addEventListener("click", () => {
+//     if(chosenWord.includes(keyLetter)) {
+//     letter.classList.add("show-letter")
+//     }
+//   })
+// })
+// }
 
 // plan: select all keyboard buttons at once, loop through them, add event listeners to each, and give them the show class
 // maybe use .includes() and .disabled so button isn't cliked on again

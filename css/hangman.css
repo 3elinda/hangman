@@ -102,7 +102,7 @@ main {
 }
 
 .section1 {
-  background: rgba(255, 255, 255, 0.2);
+  /* background: rgba(255, 255, 255, 0.2); */
 }
 
 .word {
@@ -117,8 +117,13 @@ main {
   text-align: center;
   text-transform: uppercase;
   border-bottom: 3px solid white;
-  color: var(--light-pink);
+  /* color: var(--light-pink); */
+  color: transparent;
   list-style-type: none;
+}
+
+.show-letter {
+  color: var(--light-pink);
 }
 
 .keyboard {
