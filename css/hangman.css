@@ -84,7 +84,7 @@ header {
   margin-right: 2rem;
 }
 
-.guesses p{
+.guesses p {
   color: var(--pink);
   font-family: coolStory;
   font-size: 35px;
@@ -105,7 +105,12 @@ main {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.letter{
+.word {
+  display: flex;
+  gap: 1rem;
+}
+
+.letter {
   font-family: coolStory;
   font-size: 40px;
   width: 3rem;
@@ -149,24 +154,24 @@ button {
   border-radius: 3%;
 }
 
-.won h2{
+.won h2 {
   text-align: center;
 }
 
-.answer h3{
+.answer h3 {
   font-family: alice;
   font-size: 30px;
   color: var(--red);
 }
 
-.answer p{
+.answer p {
   font-family: coolStory;
   font-size: 40px;
   color: var(--pink);
   text-transform: uppercase;
 }
 
-.border2{
+.border2 {
   background-color: var(--pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
   height: 5rem;
@@ -178,7 +183,7 @@ button {
   margin-right: 2rem;
 }
 
-.shape2{
+.shape2 {
   background-color: var(--light-pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
   height: 4rem;

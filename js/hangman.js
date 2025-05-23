@@ -1,17 +1,6 @@
-// const list = [
-//   {
-//     word: "cat",
-//     hint: "feline"
-//   },
-//   {
-//     word: "spain",
-//     hint: "europe"
-//   }
-// ]
-
 // this keyword refers to an object
 // ex= this.movies
-
+// object with keys movies, animals, countries, and mixed & arrays of words as values
 const wordBank = {
   movies: [
     `frozen`,
@@ -26,7 +15,7 @@ const wordBank = {
     `tangled`,
     `aladdin`,
     `jaws`,
-    `pinocchio`
+    `pinocchio`,
   ],
   animals: [
     `dolphin`,
@@ -46,7 +35,7 @@ const wordBank = {
     `owl`,
     `mouse`,
     `dodo`,
-    `lory`
+    `lory`,
   ],
   countries: [
     `egypt`,
@@ -72,17 +61,46 @@ const wordBank = {
     `rabbit`,
     `maze`,
     `turtle`,
-    `spain`
-  ]
+    `spain`,
+  ],
 };
 
-const word = document.querySelector(".word")
+const word = document.querySelector(".word");
 const choiceMovies = document.getElementById("movies-btn");
-const image = document.querySelector(".section1")
+const image = document.querySelector(".section1");
 
-image.addEventListener("click", () => {
-  const newList = document.createElement("li");
-  newList.className = "letter";
-  newList.innerHTML = `h`;
-  word.appendChild(newList);
+document.querySelectorAll(".buttons").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const category = btn.dataset.category;
+    localStorage.setItem("chosenCategory", category);
+    // stores chosen category in browser's localStorage
+    window.location.href = "/html/hangman.html";
+    // loads hangman page
+  });
 });
+
+// localStorage.setItem("color", "blue"); saves it
+// localStorage.getItem("color"); returns blue
+// localStorage.removeItem("color"); deletes it
+
+const category = localStorage.getItem("chosenCategory");
+// reads category user cliked from localStorage
+
+let chosenWord;
+
+const theCategory = wordBank[category];
+chosenWord = theCategory[Math.floor(Math.random() * theCategory.length)];
+
+if (chosenWord) {
+  // if a word was chosen
+  // each letter in the chosen word
+  for (let letter of chosenWord) {
+    const newList = document.createElement("li");
+    newList.className = "letter";
+    newList.innerHTML = `${letter}`;
+    word.appendChild(newList);
+  }
+}
+
+// plan: select all keyboard buttons at once, loop through them, add event listeners to each, and give them the show class
+// maybe use .includes() and .disabled so button isn't cliked on again
