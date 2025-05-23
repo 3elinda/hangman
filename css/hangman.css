@@ -102,7 +102,7 @@ main {
 }
 
 .section1 {
-  /* background: rgba(255, 255, 255, 0.2); */
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .word {
@@ -144,6 +144,10 @@ button {
   font-size: 30px;
   border: 5px solid var(--red);
   background-color: var(--light-pink);
+}
+
+button:hover{
+  cursor: pointer;
 }
 
 .won {
