@@ -67,6 +67,13 @@ const wordBank = {
 
 const word = document.querySelector(".word");
 const choiceMovies = document.getElementById("movies-btn");
+const keyLetters = document.querySelectorAll(".key-letter");
+const hangmanImage = document.querySelector(".hangman-box img");
+const guesses = document.getElementById("numWrongGuesses");
+const wonOrLost = document.querySelector(".wonOrLost");
+const result = document.getElementById("result-h2");
+const answer = document.getElementById("answer");
+const tryAgain = document.querySelector(".border2");
 
 document.querySelectorAll(".buttons").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -95,24 +102,56 @@ if (chosenWord) {
   // each letter in the chosen word
   for (let letter of chosenWord) {
     const newList = document.createElement("li");
-    newList.className = "letter";
-    newList.innerHTML = `${letter}`;
+    newList.className = "letter-border";
+
+    const letterSpan = document.createElement("span");
+    letterSpan.className = "letter";
+
+    newList.appendChild(letterSpan);
     word.appendChild(newList);
+    letterSpan.innerHTML = `${letter}`;
   }
-  // showLetters();
 }
 
-// function showLetters() {
-// const keyLetters = document.querySelectorAll(".key-letter");
+const maxGuesses = 8;
+let wrongGuesses = 0;
+let rightLetters = 0;
 
-// keyLetters.forEach((keyLetter) => {
-//   keyLetter.addEventListener("click", () => {
-//     if(chosenWord.includes(keyLetter)) {
-//     letter.classList.add("show-letter")
-//     }
-//   })
-// })
-// }
+keyLetters.forEach((keyLetter) => {
+  keyLetter.addEventListener("click", () => {
+    const clickedLetter = keyLetter.textContent.toLocaleLowerCase();
 
-// plan: select all keyboard buttons at once, loop through them, add event listeners to each, and give them the show class
-// maybe use .includes() and .disabled so button isn't cliked on again
+    if (chosenWord.includes(clickedLetter)) {
+      document.querySelectorAll(".letter").forEach((span, index) => {
+        if (chosenWord[index] === clickedLetter) {
+          span.classList.add("show-letter");
+        }
+      });
+
+      rightLetters++;
+    } else {
+      wrongGuesses++;
+      hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
+      guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
+    }
+    keyLetter.disabled = true;
+
+    if (wrongGuesses === maxGuesses) {
+      result.innerHTML = `Off with his head!<br>You lost!`;
+      answer.innerHTML = `${chosenWord}`;
+
+      wonOrLost.style.display = "flex";
+    }
+
+    if (rightLetters === chosenWord.length) {
+      result.innerHTML = `Curiouser and curiouser!<br>You won!`;
+      answer.innerHTML = `${chosenWord}`;
+
+      wonOrLost.style.display = "flex";
+    }
+  });
+});
+
+tryAgain.addEventListener("click", () => {
+  location.reload();
+});

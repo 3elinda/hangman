@@ -110,20 +110,24 @@ main {
   gap: 1rem;
 }
 
-.letter {
-  font-family: coolStory;
-  font-size: 40px;
+.letter-border {
   width: 3rem;
-  text-align: center;
-  text-transform: uppercase;
   border-bottom: 3px solid white;
-  /* color: var(--light-pink); */
-  color: transparent;
   list-style-type: none;
 }
 
-.show-letter {
+.letter {
+  font-family: coolStory;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
   color: var(--light-pink);
+  display: none;
+}
+
+.show-letter {
+  /* color: var(--light-pink); */
+  display: block;
 }
 
 .keyboard {
@@ -146,11 +150,11 @@ button {
   background-color: var(--light-pink);
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-.won {
+.wonOrLost {
   background-color: var(--light-purple);
   position: fixed;
   width: 70%;
@@ -161,9 +165,10 @@ button:hover{
   align-items: center;
   transform: translate(20%, 20%);
   border-radius: 3%;
+  display: none;
 }
 
-.won h2 {
+.wonOrLost h2 {
   text-align: center;
 }
 
@@ -178,6 +183,7 @@ button:hover{
   font-size: 40px;
   color: var(--pink);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .border2 {
@@ -190,6 +196,10 @@ button:hover{
   align-items: center;
   align-self: flex-end;
   margin-right: 2rem;
+}
+
+.border2:hover {
+  cursor: pointer;
 }
 
 .shape2 {
