@@ -24,10 +24,6 @@
 
 body {
   background-image: url(/images/bg3.jpg);
-  /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */
 }
 
 h1 {
@@ -35,7 +31,7 @@ h1 {
   font-size: 100px;
   display: flex;
   justify-self: center;
-  margin-bottom: 6rem;
+  /* margin-bottom: 4rem; */
 }
 
 h2 {
@@ -46,8 +42,11 @@ h2 {
 
 header {
   display: flex;
-  align-self: flex-start;
-  padding: 1.6rem 0;
+  /* align-self: flex-start; */
+  align-items: center;
+  /* justify-content: center; */
+  /* padding: 1.6rem 0; */
+  /* border: 2px solid rebeccapurple; */
 }
 
 .border {
@@ -105,6 +104,10 @@ button {
   border: 8px solid var(--red);
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 #movies-btn {
   color: var(--pink);
   background-color: var(--light-blue);
@@ -120,7 +123,7 @@ button {
   background-color: var(--pink);
 }
 
-#mixed-btn {
+#random-btn {
   color: var(--red);
   background-color: var(--light-pink);
 }

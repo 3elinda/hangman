@@ -1,6 +1,6 @@
 // this keyword refers to an object
 // ex= this.movies
-// object with keys movies, animals, countries, and mixed & arrays of words as values
+// object with keys movies, animals, countries, and random & arrays of words as values
 const wordBank = {
   movies: [
     `frozen`,
@@ -16,6 +16,37 @@ const wordBank = {
     `aladdin`,
     `jaws`,
     `pinocchio`,
+    `alien`,
+    `gladiator`,
+    `cinderella`,
+    `interstellar`,
+    `parasite`,
+    `oppenheimer`,
+    `twilight`,
+    `hereditary`,
+    `arrival`,
+    `braveheart`,
+    `joker`,
+    `whiplash`,
+    `carrie`,
+    `us`,
+    `scream`,
+    `smile`,
+    `predator`,
+    `elf`,
+    `clueless`,
+    `ratatouille`,
+    `annihilation`,
+    `it`,
+    `insidious`,
+    `brave`,
+    `up`,
+    `soul`,
+    `luca`,
+    `encanto`,
+    `sinister`,
+    `uncharted`,
+    `morbius`
   ],
   animals: [
     `dolphin`,
@@ -36,6 +67,22 @@ const wordBank = {
     `mouse`,
     `dodo`,
     `lory`,
+    `cat`,
+    `tiger`,
+    `zebra`,
+    `monkey`,
+    `kangaroo`,
+    `panda`,
+    `whale`,
+    `horse`,
+    `bear`,
+    `lion`,
+    `giraffe`,
+    `shark`,
+    `fox`,
+    `wolf`,
+    `deer`,
+    `crocodile`
   ],
   countries: [
     `egypt`,
@@ -51,8 +98,27 @@ const wordBank = {
     `brazil`,
     `canada`,
     `australia`,
+    `argentina`,
+    `china`,
+    `germany`,
+    `india`,
+    `indonesia`,
+    `italy`,
+    `japan`,
+    `nigeria`,
+    `russia`,
+    `spain`,
+    `vietnam`,
+    `ukraine`,
+    `switzerland`,
+    `yemen`,
+    `hungary`,
+    `zimbabwe`,
+    `estonia`,
+    `luxembourg`,
+    `armenia`
   ],
-  mixed: [
+  random: [
     `queen`,
     `hat`,
     `garden`,
@@ -65,6 +131,8 @@ const wordBank = {
   ],
 };
 
+const categoryName = document.getElementById("category-name");
+const imgBackground = document.querySelector(".section1");
 const word = document.querySelector(".word");
 const choiceMovies = document.getElementById("movies-btn");
 const keyLetters = document.querySelectorAll(".key-letter");
@@ -91,6 +159,9 @@ document.querySelectorAll(".buttons").forEach((btn) => {
 
 const category = localStorage.getItem("chosenCategory");
 // reads category user cliked from localStorage
+
+categoryName.innerHTML = category;
+
 
 let chosenWord;
 
@@ -125,14 +196,16 @@ keyLetters.forEach((keyLetter) => {
       document.querySelectorAll(".letter").forEach((span, index) => {
         if (chosenWord[index] === clickedLetter) {
           span.classList.add("show-letter");
+          rightLetters++;
         }
       });
 
-      rightLetters++;
+      // rightLetters++;
     } else {
       wrongGuesses++;
       hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
       guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
+      imgBackground.style.background = "rgba(255, 255, 255, 0.211)"
     }
     keyLetter.disabled = true;
 

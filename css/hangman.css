@@ -98,11 +98,17 @@ main {
   /* background-position: center; */
   display: flex;
   justify-content: space-around;
-  margin: 0 2rem 4rem 2rem;
+  margin: 0 2rem 2rem 2rem;
 }
 
-.section1 {
-  background: rgba(255, 255, 255, 0.2);
+/* .section1 {
+  background: rgba(255, 255, 255, 0.211);
+} */
+
+.section2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .word {
@@ -136,7 +142,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 
 button {
