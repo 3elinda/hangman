@@ -46,7 +46,7 @@ const wordBank = {
     `encanto`,
     `sinister`,
     `uncharted`,
-    `morbius`
+    `morbius`,
   ],
   animals: [
     `dolphin`,
@@ -82,7 +82,7 @@ const wordBank = {
     `fox`,
     `wolf`,
     `deer`,
-    `crocodile`
+    `crocodile`,
   ],
   countries: [
     `egypt`,
@@ -116,7 +116,7 @@ const wordBank = {
     `zimbabwe`,
     `estonia`,
     `luxembourg`,
-    `armenia`
+    `armenia`,
   ],
   random: [
     `queen`,
@@ -162,7 +162,6 @@ const category = localStorage.getItem("chosenCategory");
 
 categoryName.innerHTML = category;
 
-
 let chosenWord;
 
 const theCategory = wordBank[category];
@@ -205,7 +204,7 @@ keyLetters.forEach((keyLetter) => {
       wrongGuesses++;
       hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
       guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
-      imgBackground.style.background = "rgba(255, 255, 255, 0.211)"
+      imgBackground.style.background = "rgba(255, 255, 255, 0.211)";
     }
     keyLetter.disabled = true;
 
