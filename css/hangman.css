@@ -217,3 +217,117 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  .hangman-box img{
+    height: 25rem;
+  }
+
+  /* .section2{
+    border: 2px solid rebeccapurple;
+  }
+
+  .word{
+    border: 2px solid rebeccapurple;
+  } */
+
+  .letter-border {
+    width: 2.5rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 520px) {
+  h1{
+    font-size: 90px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  header{
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  .border{
+    position: relative;
+    left: 0;
+    margin: 0;
+    height: 4rem;
+    width: 15rem;
+  }
+
+  .shape{
+    width: 13.5rem;
+    height: 3rem;
+  }
+
+  main{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 2rem 1rem;
+  }
+
+  .hangman-box img{
+    height: 15rem;
+  }
+
+  .section2{
+    /* border: 2px solid rebeccapurple; */
+    width: 100%;
+  }
+
+  .word{
+    /* border: 2px solid rebeccapurple; */
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* width: 100%; */
+    gap: 0.5rem;
+  }
+
+  .letter-border {
+    width: 2rem;
+  }
+
+  .letter {
+    font-size: 25px;
+  }
+
+  .keyboard{
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    width: 4rem;
+    height: 3rem;
+    font-size: 25px;
+  }
+
+  .wonOrLost{
+    width: 75%;
+    height: 60%;
+  }
+
+  .answer h3 {
+    font-size: 25px;
+  }
+
+  .answer p {
+    font-size: 30px;
+  }
+
+  .border2{
+    height: 4rem;
+    width: 15rem;
+    align-self: center;
+  }
+
+  .shape2{
+    width: 13.5rem;
+    height: 3rem;
+  }
+}

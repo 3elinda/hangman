@@ -98,7 +98,7 @@ a :hover {
   cursor: pointer;
 }
 
-/* button {
+button {
   width: 15rem;
   height: 12rem;
   font-family: coolStory;
@@ -106,9 +106,10 @@ a :hover {
   font-size: 30px;
   border-radius: 15px;
   border: 8px solid var(--red);
-} */
+}
 
-button {
+/* arrow shape */
+/* button {
   width: 20rem;
   height: 8rem;
   font-family: coolStory;
@@ -164,9 +165,11 @@ button:hover {
   background-color: var(--light-pink);
   color: var(--red);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
-}
+} */
 
-/* #movies-btn {
+/* cookie shape */
+
+#movies-btn {
   color: var(--pink);
   background-color: var(--light-blue);
 }
@@ -184,4 +187,113 @@ button:hover {
 #random-btn {
   color: var(--red);
   background-color: var(--light-pink);
-} */
+}
+
+.container{
+  /* border: 2px solid rebeccapurple; */
+  position: relative;
+  top: 7rem;
+}
+
+.border2{
+  position: absolute;
+  background-color: var(--pink);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
+  height: 5rem;
+  width: 18rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 2rem;
+}
+
+.shape2{
+  background-color: var(--light-pink);
+  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
+  height: 4rem;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  /* h1{
+    font-size: 95px;
+  } */
+
+  header{
+    flex-direction: column;
+    width: 100%;
+    /* margin-top: 2rem; */
+  }
+
+  .border{
+    position: relative;
+  }
+
+  main{
+    width: 70%;
+  }
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 520px) {
+
+  h1{
+    font-size: 90px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .border{
+    position: relative;
+    left: 0;
+    margin: 0;
+    height: 4rem;
+    width: 15rem;
+  }
+
+  .shape{
+    width: 13.5rem;
+    height: 3rem;
+  }
+
+  main{
+    display: flex;
+    justify-self: center;
+    /* gap: 1rem; */
+    /* border: 2px solid red; */
+  }
+
+  section{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-self: center;
+  }
+
+  button {
+    width: 14.5rem;
+    height: 5rem;
+    font-size: 25px;
+  }
+
+  .btn-fill{
+    width: 13rem;
+    height: 4rem;
+  }
+}
