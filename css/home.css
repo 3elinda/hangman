@@ -67,24 +67,29 @@ a :hover {
   cursor: pointer;
 }
 
-
 /* mobile */
 
 @media screen and (max-width: 520px) {
-  h1{
+  h1 {
     font-size: 95px;
     margin: 0;
   }
 
-  main{
+  main {
     display: flex;
     justify-content: center;
-  background-size: 8rem;
+    background-size: 8rem;
   }
 
-  #play-me{
+  #play-me {
     font-size: 25px;
     padding: 2rem 1rem;
     margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main {
+    background-size: 5rem;
   }
 }
