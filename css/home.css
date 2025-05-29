@@ -67,6 +67,17 @@ a :hover {
   cursor: pointer;
 }
 
+@media  screen and (max-width:620px){
+  h1{
+    font-size: 150px;
+  }
+
+  main{
+    background-size: 6rem;
+  }
+  
+}
+
 /* mobile */
 
 @media screen and (max-width: 520px) {

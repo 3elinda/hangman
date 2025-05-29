@@ -243,6 +243,46 @@ button:hover {
   }
 }
 
+@media  screen and (max-width:620px){
+  h1{
+    font-size: 95px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  section{
+    gap: 1rem;
+  }
+
+  button{
+    width: 13rem;
+    height: 10rem;
+  }
+
+  .border {
+    height: 4rem;
+    width: 15rem;
+  }
+
+  .shape {
+    width: 13.5rem;
+    height: 3rem;
+  }
+
+  .border2{
+    height: 4rem;
+    width: 15rem;
+    margin-top: 1rem;
+  }
+
+  .shape2{
+    width: 13.5rem;
+    height: 3rem;
+  }
+}
+
 /* mobile */
 
 @media screen and (max-width: 520px) {
@@ -277,25 +317,45 @@ button:hover {
   main {
     display: flex;
     justify-self: center;
-    /* gap: 1rem; */
+    gap: 1rem;
     /* border: 2px solid red; */
+    justify-content: center;
+    /* align-items: center; */
   }
 
   section {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    /* gap: 4rem; */
+    gap: 1rem;
     justify-self: center;
+    align-items: center;
   }
 
-  button {
+  button{
+    width: 12rem;
+    height: 9rem;
+  }
+
+  /* button {
     width: 14.5rem;
     height: 5rem;
     font-size: 25px;
-  }
+  } */
 
-  .btn-fill {
+  /* .btn-fill {
     width: 13rem;
     height: 4rem;
+  } */
+
+  .border2{
+    height: 4rem;
+    width: 15rem;
+    margin-top: 1rem;
+  }
+
+  .shape2{
+    width: 13.5rem;
+    height: 3rem;
   }
 }

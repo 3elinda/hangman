@@ -172,6 +172,10 @@ button:hover {
   transform: translate(20%, 20%);
   border-radius: 3%;
   display: none;
+  background-image: url(/images/tea-party.png), url(/images/rabbit-alice.png), url(/images/queen.png);
+  background-position: top left, top right, bottom left;
+  background-repeat: no-repeat;
+  background-size: 8rem, 9rem, 8rem;
 }
 
 .wonOrLost h2 {
@@ -192,6 +196,17 @@ button:hover {
   text-align: center;
 }
 
+.button-container{
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container img{
+  height: 7rem;
+  align-self: center;
+}
+
 .border2 {
   background-color: var(--pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
@@ -200,7 +215,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: flex-end;
+  /* align-self: flex-end; */
   margin-right: 2rem;
 }
 
@@ -234,6 +249,73 @@ button:hover {
 
   .letter-border {
     width: 2.5rem;
+  }
+}
+
+@media  screen and (max-width:620px){
+  h1{
+    font-size: 95px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  header{
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+
+  .border{
+    height: 4rem;
+    width: 15rem;
+  }
+
+  .shape{
+    width: 13.5rem;
+    height: 3rem;
+  }
+
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hangman-box img{
+    height: 18rem;
+  }
+
+  .letter-border {
+    width: 2.5rem;
+  }
+
+  .letter{
+    font-size: 33px;
+  }
+
+  button{
+    font-size: 28px;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+
+  .border2{
+    height: 4rem;
+    width: 15rem;
+    margin-top: 1rem;
+  }
+
+  .shape2{
+    width: 13.5rem;
+    height: 3rem;
+  }
+
+  .wonOrLost{
+    background-size: 5rem, 6rem, 6rem;
+  }
+
+  .button-container img{
+    height: 6rem;
   }
 }
 
@@ -310,6 +392,7 @@ button:hover {
   .wonOrLost{
     width: 75%;
     height: 60%;
+    background-size: 4rem, 5rem, 5rem;
   }
 
   .answer h3 {
@@ -318,6 +401,10 @@ button:hover {
 
   .answer p {
     font-size: 30px;
+  }
+
+  .button-container img{
+    height: 5rem;
   }
 
   .border2{
