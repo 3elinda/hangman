@@ -189,13 +189,13 @@ button:hover {
   background-color: var(--light-pink);
 }
 
-.container{
+.container {
   /* border: 2px solid rebeccapurple; */
   position: relative;
   top: 7rem;
 }
 
-.border2{
+.border2 {
   position: absolute;
   background-color: var(--pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
@@ -208,7 +208,7 @@ button:hover {
   right: 2rem;
 }
 
-.shape2{
+.shape2 {
   background-color: var(--light-pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
   height: 4rem;
@@ -220,46 +220,48 @@ button:hover {
 
 /* tablet */
 @media screen and (max-width: 1024px) {
-  /* h1{
-    font-size: 95px;
-  } */
+  h1 {
+    /* font-size: 95px; */
+    align-self: center;
+  }
 
-  header{
+  header {
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
   }
 
-  .border{
+  .border {
     position: relative;
+    margin-left: 2rem;
   }
 
-  main{
+  main {
     width: 70%;
+    /* align-self: flex-end; */
   }
 }
-
 
 /* mobile */
 
 @media screen and (max-width: 520px) {
-
-  h1{
+  h1 {
     font-size: 90px;
   }
 
-  h2{
+  h2 {
     font-size: 30px;
   }
 
-  header{
+  header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
   }
 
-  .border{
+  .border {
     position: relative;
     left: 0;
     margin: 0;
@@ -267,19 +269,19 @@ button:hover {
     width: 15rem;
   }
 
-  .shape{
+  .shape {
     width: 13.5rem;
     height: 3rem;
   }
 
-  main{
+  main {
     display: flex;
     justify-self: center;
     /* gap: 1rem; */
     /* border: 2px solid red; */
   }
 
-  section{
+  section {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -292,7 +294,7 @@ button:hover {
     font-size: 25px;
   }
 
-  .btn-fill{
+  .btn-fill {
     width: 13rem;
     height: 4rem;
   }
