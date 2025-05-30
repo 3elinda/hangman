@@ -95,7 +95,7 @@ const wordBank = {
     `norway`,
     `iceland`,
     `mexico`,
-    `findland`,
+    `finland`,
     `greece`,
     `poland`,
     `thailand`,
@@ -251,21 +251,9 @@ const wordBank = {
     `croquet`,
     `cheshire`,
     `mad`,
-    `curious`
+    `curious`,
   ],
 };
-
-const categoryName = document.getElementById("category-name");
-const imgBackground = document.querySelector(".section1");
-const word = document.querySelector(".word");
-const choiceMovies = document.getElementById("movies-btn");
-const keyLetters = document.querySelectorAll(".key-letter");
-const hangmanImage = document.querySelector(".hangman-box img");
-const guesses = document.getElementById("numWrongGuesses");
-const wonOrLost = document.querySelector(".wonOrLost");
-const result = document.getElementById("result-h2");
-const answer = document.getElementById("answer");
-const tryAgain = document.querySelector(".border2");
 
 document.querySelectorAll(".buttons").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -277,77 +265,105 @@ document.querySelectorAll(".buttons").forEach((btn) => {
   });
 });
 
-// localStorage.setItem("color", "blue"); saves it
-// localStorage.getItem("color"); returns blue
-// localStorage.removeItem("color"); deletes it
+document.addEventListener("DOMContentLoaded", () => {
+  // localStorage.setItem("color", "blue"); saves it
+  // localStorage.getItem("color"); returns blue
+  // localStorage.removeItem("color"); deletes it
 
-const category = localStorage.getItem("chosenCategory");
-// reads category user cliked from localStorage
+  const category = localStorage.getItem("chosenCategory");
+  // reads category user cliked from localStorage
 
-categoryName.innerHTML = category;
-
-let chosenWord;
-
-const theCategory = wordBank[category];
-chosenWord = theCategory[Math.floor(Math.random() * theCategory.length)];
-
-if (chosenWord) {
-  // if a word was chosen
-  // each letter in the chosen word
-  for (let letter of chosenWord) {
-    const newList = document.createElement("li");
-    newList.className = "letter-border";
-
-    const letterSpan = document.createElement("span");
-    letterSpan.className = "letter";
-
-    newList.appendChild(letterSpan);
-    word.appendChild(newList);
-    letterSpan.innerHTML = `${letter}`;
+  const categoryName = document.getElementById("category-name");
+  if (categoryName) {
+    categoryName.innerHTML = category;
   }
-}
 
-const maxGuesses = 8;
-let wrongGuesses = 0;
-let rightLetters = 0;
+  const imgBackground = document.querySelector(".section1");
+  const word = document.querySelector(".word");
+  const choiceMovies = document.getElementById("movies-btn");
+  const keyLetters = document.querySelectorAll(".key-letter");
+  const hangmanImage = document.querySelector(".hangman-box img");
+  const guesses = document.getElementById("numWrongGuesses");
+  const wonOrLost = document.querySelector(".wonOrLost");
+  const result = document.getElementById("result-h2");
+  const answer = document.getElementById("answer");
+  const tryAgain = document.querySelector(".border2");
 
-keyLetters.forEach((keyLetter) => {
-  keyLetter.addEventListener("click", () => {
-    const clickedLetter = keyLetter.textContent.toLocaleLowerCase();
+  if (!category || !wordBank[category]) {
+    alert("No category chosen. Please go back and pick one");
+    window.location.href = "/html/options.html";
+  }
 
-    if (chosenWord.includes(clickedLetter)) {
-      document.querySelectorAll(".letter").forEach((span, index) => {
-        if (chosenWord[index] === clickedLetter) {
-          span.classList.add("show-letter");
-          rightLetters++;
-        }
-      });
+  // categoryName.innerHTML = category;
 
-      // rightLetters++;
-    } else {
-      wrongGuesses++;
-      hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
-      guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
-      imgBackground.style.background = "rgba(255, 255, 255, 0.211)";
+  let chosenWord;
+
+  const theCategory = wordBank[category];
+  chosenWord = theCategory[Math.floor(Math.random() * theCategory.length)];
+
+  if (chosenWord) {
+    // if a word was chosen
+    // each letter in the chosen word
+    for (let letter of chosenWord) {
+      const newList = document.createElement("li");
+      newList.className = "letter-border";
+
+      const letterSpan = document.createElement("span");
+      letterSpan.className = "letter";
+
+      newList.appendChild(letterSpan);
+      word.appendChild(newList);
+      letterSpan.innerHTML = `${letter}`;
     }
-    keyLetter.disabled = true;
+  }
 
-    if (wrongGuesses === maxGuesses) {
-      result.innerHTML = `Off with his head!<br>You lost!`;
-      answer.innerHTML = `${chosenWord}`;
+  const maxGuesses = 8;
+  let wrongGuesses = 0;
+  let rightLetters = 0;
 
-      wonOrLost.style.display = "flex";
-    }
+  keyLetters.forEach((keyLetter) => {
+    keyLetter.addEventListener("click", () => {
+      const clickedLetter = keyLetter.textContent.toLocaleLowerCase();
 
-    if (rightLetters === chosenWord.length) {
-      result.innerHTML = `Curiouser and curiouser!<br>You won!`;
-      answer.innerHTML = `${chosenWord}`;
+      if (chosenWord.includes(clickedLetter)) {
+        let correctCount = 0;
 
-      wonOrLost.style.display = "flex";
-    }
+        document.querySelectorAll(".letter").forEach((span, index) => {
+          if (
+            chosenWord[index] === clickedLetter &&
+            !span.classList.contains("show-letter")
+          ) {
+            span.classList.add("show-letter");
+            correctCount++;
+          }
+        });
+
+        rightLetters += correctCount;
+      } else {
+        wrongGuesses++;
+        hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
+        guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
+        imgBackground.style.background = "rgba(255, 255, 255, 0.211)";
+      }
+      keyLetter.disabled = true;
+
+      if (wrongGuesses === maxGuesses) {
+        result.innerHTML = `Off with his head!<br>You lost!`;
+        answer.innerHTML = `${chosenWord}`;
+
+        wonOrLost.style.display = "flex";
+      }
+
+      if (rightLetters === chosenWord.length) {
+        result.innerHTML = `Curiouser and curiouser!<br>You won!`;
+        answer.innerHTML = `${chosenWord}`;
+
+        wonOrLost.style.display = "flex";
+      }
+    });
   });
-});
 
-tryAgain.addEventListener("click", () => {
-  location.reload();
+  tryAgain.addEventListener("click", () => {
+    location.reload();
+  });
 });
