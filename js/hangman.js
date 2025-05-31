@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const theCategory = wordBank[category];
   chosenWord = theCategory[Math.floor(Math.random() * theCategory.length)];
 
-  if (chosenWord) {
+  if (word && chosenWord) {
     // if a word was chosen
     // each letter in the chosen word
     for (let letter of chosenWord) {
