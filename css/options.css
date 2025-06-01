@@ -108,64 +108,9 @@ button {
   border: 8px solid var(--red);
 }
 
-/* arrow shape */
-/* button {
-  width: 20rem;
-  height: 8rem;
-  font-family: coolStory;
-  font-weight: bold;
-  font-size: 30px;
-  background-color: var(--red);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#movies-btn,
-#countries-btn {
-  clip-path: polygon(10% 0%, 100% 0%, 93% 50%, 100% 100%, 10% 100%, 0% 50%);
-}
-
-#animals-btn,
-#random-btn {
-  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
-}
-
 button:hover {
   cursor: pointer;
 }
-
-.btn-fill {
-  width: 18rem;
-  height: 6.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fill1 {
-  background-color: var(--light-blue);
-  color: var(--pink);
-  clip-path: polygon(10% 0%, 100% 0%, 93% 50%, 100% 100%, 10% 100%, 0% 50%);
-}
-
-.fill2 {
-  background-color: var(--dark-blue);
-  color: var(--pink);
-  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
-}
-
-.fill3 {
-  background-color: var(--pink);
-  color: var(--light-pink);
-  clip-path: polygon(10% 0%, 100% 0%, 93% 50%, 100% 100%, 10% 100%, 0% 50%);
-}
-
-.fill4 {
-  background-color: var(--light-pink);
-  color: var(--red);
-  clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
-} */
 
 /* cookie shape */
 
@@ -243,20 +188,20 @@ button:hover {
   }
 }
 
-@media  screen and (max-width:620px){
-  h1{
+@media screen and (max-width: 620px) {
+  h1 {
     font-size: 95px;
   }
 
-  h2{
+  h2 {
     font-size: 30px;
   }
 
-  section{
+  section {
     gap: 1rem;
   }
 
-  button{
+  button {
     width: 13rem;
     height: 10rem;
   }
@@ -271,13 +216,13 @@ button:hover {
     height: 3rem;
   }
 
-  .border2{
+  .border2 {
     height: 4rem;
     width: 15rem;
     margin-top: 1rem;
   }
 
-  .shape2{
+  .shape2 {
     width: 13.5rem;
     height: 3rem;
   }
@@ -332,7 +277,7 @@ button:hover {
     align-items: center;
   }
 
-  button{
+  button {
     width: 12rem;
     height: 9rem;
   }
@@ -348,13 +293,13 @@ button:hover {
     height: 4rem;
   } */
 
-  .border2{
+  .border2 {
     height: 4rem;
     width: 15rem;
     margin-top: 1rem;
   }
 
-  .shape2{
+  .shape2 {
     width: 13.5rem;
     height: 3rem;
   }

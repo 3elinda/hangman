@@ -289,10 +289,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const answer = document.getElementById("answer");
   const tryAgain = document.querySelector(".border2");
 
-  if (!category || !wordBank[category]) {
-    alert("No category chosen. Please go back and pick one");
-    window.location.href = "/html/options.html";
-  }
+  // if (!category || !wordBank[category]) {
+  //   alert("No category chosen. Please go back and pick one");
+  //   window.location.href = "/html/options.html";
+  // }
 
   // categoryName.innerHTML = category;
 
