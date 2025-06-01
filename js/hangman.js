@@ -363,6 +363,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // runs when a key is pressed on keyboard
+  // event is object that holds info about key event/which key was pressed
+  document.addEventListener("keydown", (event) => {
+    const pressedKey = event.key.toLocaleLowerCase();
+    // makes a pressed key to lowercase
+
+    // pressedKey.length ensures single characters not like shift or enter...
+    // makes sure its a letter from a-z and not symbol
+    // const keyButton = Array.from(keyLetters).find( converts Nodelist of .key-letter buttons into regular array with Array.from
+    //  and then .find() to search for onscreen letter buttons whose textContent matches the pressed key
+    if (pressedKey.length === 1 && pressedKey.match(/[a-z]/)) {
+      const keyButton = Array.from(keyLetters).find(
+        (btn) => btn.textContent.toLocaleLowerCase() === pressedKey
+        // for each btn it checks if text inside matches pressed key
+      );
+
+      // checks keyButton exists/is found and isn't disabled
+      if (keyButton && !keyButton.disabled) {
+        keyButton.click();
+        // simulates mouse click and keyLtter.addEventListener("click",...) will run
+      }
+    }
+  });
+
   tryAgain.addEventListener("click", () => {
     location.reload();
   });
