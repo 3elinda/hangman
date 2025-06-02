@@ -55,10 +55,10 @@ h1 {
 #play-me {
   font-family: coolStory;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
   color: var(--red);
-  padding: 3rem 2rem;
-  border: 5px solid var(--red);
+  padding: 3.5rem 2.5rem;
+  border: 7px solid var(--red);
   border-radius: 15px;
   background-color: var(--light-pink);
 }
@@ -67,6 +67,7 @@ a :hover {
   cursor: pointer;
 }
 
+/* tablet */
 @media  screen and (max-width:620px){
   h1{
     font-size: 150px;
@@ -74,6 +75,11 @@ a :hover {
 
   main{
     background-size: 6rem;
+  }
+
+  #play-me {
+    padding: 3rem 2rem;
+    font-size: 30px;
   }
   
 }

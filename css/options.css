@@ -135,11 +135,11 @@ button:hover {
 }
 
 .container {
-  /* border: 2px solid rebeccapurple; */
   position: relative;
   top: 7rem;
 }
 
+/* That way button */
 .border2 {
   position: absolute;
   background-color: var(--pink);
@@ -161,6 +161,37 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1240px) {
+  main{
+    justify-content: space-around;
+  }
+
+  section{
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  h1{
+    align-self: center;
+  }
+
+  header{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+
+  .border{
+    position: relative;
+  }
+
+  button{
+    height: 11rem;
+    width: 14rem;
+  }
 }
 
 /* tablet */
@@ -185,6 +216,10 @@ button:hover {
   main {
     width: 70%;
     /* align-self: flex-end; */
+  }
+
+  button{
+    height: 11rem;
   }
 }
 
@@ -246,9 +281,12 @@ button:hover {
     margin-top: 2rem;
   }
 
+  header a{
+    align-self: flex-start;
+  }
+
   .border {
     position: relative;
-    left: 0;
     margin: 0;
     height: 4rem;
     width: 15rem;
@@ -282,17 +320,6 @@ button:hover {
     height: 9rem;
   }
 
-  /* button {
-    width: 14.5rem;
-    height: 5rem;
-    font-size: 25px;
-  } */
-
-  /* .btn-fill {
-    width: 13rem;
-    height: 4rem;
-  } */
-
   .border2 {
     height: 4rem;
     width: 15rem;
@@ -302,5 +329,26 @@ button:hover {
   .shape2 {
     width: 13.5rem;
     height: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .border{
+    left: 0;
+    align-self: center;
+  }
+
+  button {
+    width: 10rem;
+    height: 8rem;
+    font-size: 25px;
   }
 }

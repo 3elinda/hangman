@@ -101,10 +101,6 @@ main {
   margin: 0 2rem 2rem 2rem;
 }
 
-/* .section1 {
-  background: rgba(255, 255, 255, 0.211);
-} */
-
 .section2 {
   display: flex;
   align-items: center;
@@ -132,7 +128,6 @@ main {
 }
 
 .show-letter {
-  /* color: var(--light-pink); */
   display: block;
 }
 
@@ -142,7 +137,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  /* margin-bottom: 5rem; */
 }
 
 button {
@@ -233,6 +227,14 @@ button:hover {
   align-items: center;
 }
 
+/* responsive */
+
+@media screen and (max-width: 1240px) {
+  .hangman-box img{
+    height: 30rem;
+  }
+}
+
 /* tablet */
 @media screen and (max-width: 1024px) {
   .hangman-box img{
@@ -241,11 +243,13 @@ button:hover {
 
   /* .section2{
     border: 2px solid rebeccapurple;
-  }
+  } */
 
   .word{
-    border: 2px solid rebeccapurple;
-  } */
+    /* border: 2px solid rebeccapurple;
+    color: white; */
+    flex-wrap: wrap;
+  }
 
   .letter-border {
     width: 2.5rem;
@@ -365,8 +369,6 @@ button:hover {
   .word{
     /* border: 2px solid rebeccapurple; */
     justify-content: center;
-    /* flex-wrap: wrap; */
-    /* width: 100%; */
     gap: 0.5rem;
   }
 
@@ -416,5 +418,29 @@ button:hover {
   .shape2{
     width: 13.5rem;
     height: 3rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .guesses p {
+    font-size: 30px;
+  }
+
+  .hangman-box img{
+    height: 13rem;
+  }
+
+  button {
+    width: 3.8rem;
+    height: 2.8rem;
+    font-size: 23px;
   }
 }

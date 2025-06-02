@@ -52,6 +52,9 @@ const wordBank = {
     `scarface`,
     `old`,
     `divergent`,
+    `yesterday`,
+    `zootopia`,
+    `zombieland`
   ],
   animals: [
     `dolphin`,
