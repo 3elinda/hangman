@@ -36,7 +36,6 @@ main {
   background-size: 10rem;
   background-repeat: no-repeat;
   width: 100%;
-  /* border: 2px solid rebeccapurple; */
   height: 95vh;
 }
 
@@ -68,12 +67,12 @@ a :hover {
 }
 
 /* tablet */
-@media  screen and (max-width:620px){
-  h1{
+@media screen and (max-width: 620px) {
+  h1 {
     font-size: 150px;
   }
 
-  main{
+  main {
     background-size: 6rem;
   }
 
@@ -81,14 +80,13 @@ a :hover {
     padding: 3rem 2rem;
     font-size: 30px;
   }
-  
 }
 
 /* mobile */
 
 @media screen and (max-width: 520px) {
   h1 {
-    font-size: 95px;
+    font-size: 90px;
     margin: 0;
   }
 
@@ -99,7 +97,7 @@ a :hover {
   }
 
   #play-me {
-    font-size: 25px;
+    font-size: 23px;
     padding: 2rem 1rem;
     margin-top: 1rem;
   }

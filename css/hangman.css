@@ -132,7 +132,7 @@ main {
 }
 
 .keyboard {
-  width: 80%;
+  width: 85%;
   justify-self: center;
   display: flex;
   flex-wrap: wrap;
@@ -166,10 +166,12 @@ button:hover {
   transform: translate(20%, 20%);
   border-radius: 3%;
   display: none;
-  background-image: url(/images/tea-party.png), url(/images/rabbit-alice.png), url(/images/queen.png);
+  background-image: url(/images/tea-party.png), url(/images/rabbit-alice.png),
+    url(/images/queen.png);
   background-position: top left, top right, bottom left;
   background-repeat: no-repeat;
   background-size: 8rem, 9rem, 8rem;
+  z-index: 5;
 }
 
 .wonOrLost h2 {
@@ -190,13 +192,13 @@ button:hover {
   text-align: center;
 }
 
-.button-container{
+.button-container {
   align-self: flex-end;
   display: flex;
   flex-direction: column;
 }
 
-.button-container img{
+.button-container img {
   height: 7rem;
   align-self: center;
 }
@@ -227,17 +229,29 @@ button:hover {
   align-items: center;
 }
 
+#block-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(99, 75, 188, 0.211);
+  z-index: 4;
+  pointer-events: all;
+}
+
 /* responsive */
 
 @media screen and (max-width: 1240px) {
-  .hangman-box img{
+  .hangman-box img {
     height: 30rem;
   }
 }
 
 /* tablet */
 @media screen and (max-width: 1024px) {
-  .hangman-box img{
+  .hangman-box img {
     height: 25rem;
   }
 
@@ -245,7 +259,7 @@ button:hover {
     border: 2px solid rebeccapurple;
   } */
 
-  .word{
+  .word {
     /* border: 2px solid rebeccapurple;
     color: white; */
     flex-wrap: wrap;
@@ -256,36 +270,45 @@ button:hover {
   }
 }
 
-@media  screen and (max-width:620px){
-  h1{
+@media screen and (max-width: 620px) {
+  h1 {
     font-size: 95px;
   }
 
-  h2{
+  h2 {
     font-size: 30px;
   }
 
-  header{
+  header {
     flex-direction: column;
     margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
-  .border{
+  .guesses {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .border {
     height: 4rem;
     width: 15rem;
   }
 
-  .shape{
+  .shape {
     width: 13.5rem;
     height: 3rem;
   }
 
-  main{
+  main {
     flex-direction: column;
     align-items: center;
   }
 
-  .hangman-box img{
+  .hangman-box img {
     height: 18rem;
   }
 
@@ -293,52 +316,59 @@ button:hover {
     width: 2.5rem;
   }
 
-  .letter{
+  .letter {
     font-size: 33px;
   }
 
-  button{
+  button {
     font-size: 28px;
     width: 4.5rem;
     height: 3.5rem;
   }
 
-  .border2{
+  .border2 {
     height: 4rem;
     width: 15rem;
     margin-top: 1rem;
   }
 
-  .shape2{
+  .shape2 {
     width: 13.5rem;
     height: 3rem;
   }
 
-  .wonOrLost{
+  .wonOrLost {
     background-size: 5rem, 6rem, 6rem;
+    width: 80%;
+    height: 80%;
+    transform: translate(12%, 12%);
   }
 
-  .button-container img{
+  #result-h2 {
+    margin-top: 5rem;
+  }
+
+  .button-container img {
     height: 6rem;
   }
 }
 
 /* mobile */
 @media screen and (max-width: 520px) {
-  h1{
+  h1 {
     font-size: 90px;
   }
 
-  h2{
+  h2 {
     font-size: 30px;
   }
 
-  header{
+  header {
     flex-direction: column;
     margin-top: 2rem;
   }
-  
-  .border{
+
+  .border {
     position: relative;
     left: 0;
     margin: 0;
@@ -346,27 +376,27 @@ button:hover {
     width: 15rem;
   }
 
-  .shape{
+  .shape {
     width: 13.5rem;
     height: 3rem;
   }
 
-  main{
+  main {
     flex-direction: column;
     align-items: center;
     margin: 0 1rem 2rem 1rem;
   }
 
-  .hangman-box img{
+  .hangman-box img {
     height: 15rem;
   }
 
-  .section2{
+  .section2 {
     /* border: 2px solid rebeccapurple; */
     width: 100%;
   }
 
-  .word{
+  .word {
     /* border: 2px solid rebeccapurple; */
     justify-content: center;
     gap: 0.5rem;
@@ -380,7 +410,7 @@ button:hover {
     font-size: 25px;
   }
 
-  .keyboard{
+  .keyboard {
     justify-content: center;
     margin-bottom: 2rem;
   }
@@ -391,9 +421,9 @@ button:hover {
     font-size: 25px;
   }
 
-  .wonOrLost{
+  .wonOrLost {
     width: 75%;
-    height: 60%;
+    height: 85%;
     background-size: 4rem, 5rem, 5rem;
   }
 
@@ -405,17 +435,17 @@ button:hover {
     font-size: 30px;
   }
 
-  .button-container img{
+  .button-container img {
     height: 5rem;
   }
 
-  .border2{
+  .border2 {
     height: 4rem;
     width: 15rem;
     align-self: center;
   }
 
-  .shape2{
+  .shape2 {
     width: 13.5rem;
     height: 3rem;
   }
@@ -434,7 +464,7 @@ button:hover {
     font-size: 30px;
   }
 
-  .hangman-box img{
+  .hangman-box img {
     height: 13rem;
   }
 

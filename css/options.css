@@ -164,31 +164,31 @@ button:hover {
 }
 
 @media screen and (max-width: 1240px) {
-  main{
+  main {
     justify-content: space-around;
   }
 
-  section{
+  section {
     gap: 3rem;
   }
 }
 
 @media screen and (max-width: 1120px) {
-  h1{
+  h1 {
     align-self: center;
   }
 
-  header{
+  header {
     flex-direction: column;
     align-items: flex-start;
     margin-top: 2rem;
   }
 
-  .border{
+  .border {
     position: relative;
   }
 
-  button{
+  button {
     height: 11rem;
     width: 14rem;
   }
@@ -218,7 +218,7 @@ button:hover {
     /* align-self: flex-end; */
   }
 
-  button{
+  button {
     height: 11rem;
   }
 }
@@ -281,7 +281,7 @@ button:hover {
     margin-top: 2rem;
   }
 
-  header a{
+  header a {
     align-self: flex-start;
   }
 
@@ -301,15 +301,12 @@ button:hover {
     display: flex;
     justify-self: center;
     gap: 1rem;
-    /* border: 2px solid red; */
     justify-content: center;
-    /* align-items: center; */
   }
 
   section {
     display: flex;
-    flex-direction: column;
-    /* gap: 4rem; */
+    /* flex-direction: column; */
     gap: 1rem;
     justify-self: center;
     align-items: center;
@@ -330,25 +327,29 @@ button:hover {
     width: 13.5rem;
     height: 3rem;
   }
+
+  .container {
+    margin-bottom: 12rem;
+  }
 }
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   h2 {
     font-size: 28px;
   }
 
-  .border{
+  .border {
     left: 0;
     align-self: center;
   }
 
   button {
-    width: 10rem;
-    height: 8rem;
-    font-size: 25px;
+    width: 9.5rem;
+    height: 7.5rem;
+    font-size: 23px;
   }
 }

@@ -54,7 +54,7 @@ const wordBank = {
     `divergent`,
     `yesterday`,
     `zootopia`,
-    `zombieland`
+    `zombieland`,
   ],
   animals: [
     `dolphin`,
@@ -292,6 +292,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const answer = document.getElementById("answer");
   const tryAgain = document.querySelector(".border2");
 
+  let gameOver = false;
+
   // if (!category || !wordBank[category]) {
   //   alert("No category chosen. Please go back and pick one");
   //   window.location.href = "/html/options.html";
@@ -355,6 +357,8 @@ document.addEventListener("DOMContentLoaded", () => {
         answer.innerHTML = `${chosenWord}`;
 
         wonOrLost.style.display = "flex";
+        document.getElementById("block-screen").style.display = "block";
+        gameOver = true;
       }
 
       if (rightLetters === chosenWord.length) {
@@ -362,6 +366,8 @@ document.addEventListener("DOMContentLoaded", () => {
         answer.innerHTML = `${chosenWord}`;
 
         wonOrLost.style.display = "flex";
+        document.getElementById("block-screen").style.display = "block";
+        gameOver = true;
       }
     });
   });
@@ -369,6 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // runs when a key is pressed on keyboard
   // event is object that holds info about key event/which key was pressed
   document.addEventListener("keydown", (event) => {
+    if (gameOver) return;
+
     const pressedKey = event.key.toLocaleLowerCase();
     // makes a pressed key to lowercase
 
