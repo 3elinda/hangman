@@ -135,7 +135,7 @@ main {
 }
 
 .keyboard {
-  width: 85%;
+  width: 95%;
   justify-self: center;
   display: flex;
   flex-wrap: wrap;
@@ -464,9 +464,17 @@ button:hover {
     height: 13rem;
   }
 
+  .keyboard{
+    gap: 0.5rem;
+  }
+
   button {
     width: 3.8rem;
-    height: 2.8rem;
+    height: 3rem;
     font-size: 23px;
+  }
+
+  .button-container{
+    margin-bottom: 2rem;
   }
 }

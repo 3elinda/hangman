@@ -348,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
         wrongGuesses++;
         hangmanImage.src = `/images/hangman-${wrongGuesses}.png`;
         guesses.innerHTML = `${wrongGuesses} / ${maxGuesses}`;
-        imgBackground.style.background = "rgba(255, 255, 255, 0.211)";
+        imgBackground.style.background = "rgba(255, 255, 255, 0.215)";
       }
       keyLetter.disabled = true;
 
