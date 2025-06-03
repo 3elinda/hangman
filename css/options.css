@@ -136,7 +136,7 @@ button:hover {
 
 .container {
   position: relative;
-  top: 7rem;
+  /* top: 7rem; */
 }
 
 /* That way button */
@@ -230,6 +230,10 @@ button:hover {
 
   h2 {
     font-size: 30px;
+  }
+
+  header {
+    margin-bottom: 0;
   }
 
   section {
@@ -327,10 +331,10 @@ button:hover {
     width: 13.5rem;
     height: 3rem;
   }
-
+  /* 
   .container {
     margin-bottom: 12rem;
-  }
+  } */
 }
 
 @media screen and (max-width: 360px) {

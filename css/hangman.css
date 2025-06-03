@@ -109,7 +109,10 @@ main {
 
 .word {
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  padding: 0;
+  margin: 0;
 }
 
 .letter-border {
@@ -255,13 +258,7 @@ button:hover {
     height: 25rem;
   }
 
-  /* .section2{
-    border: 2px solid rebeccapurple;
-  } */
-
   .word {
-    /* border: 2px solid rebeccapurple;
-    color: white; */
     flex-wrap: wrap;
   }
 
@@ -310,6 +307,11 @@ button:hover {
 
   .hangman-box img {
     height: 18rem;
+  }
+
+  .section2 {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .letter-border {
@@ -391,13 +393,7 @@ button:hover {
     height: 15rem;
   }
 
-  .section2 {
-    /* border: 2px solid rebeccapurple; */
-    width: 100%;
-  }
-
   .word {
-    /* border: 2px solid rebeccapurple; */
     justify-content: center;
     gap: 0.5rem;
   }
