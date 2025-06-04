@@ -24,6 +24,7 @@
 
 body {
   background-image: url(/images/bg3.jpg);
+  height: 95vh;
 }
 
 h1 {
@@ -84,6 +85,7 @@ main {
   justify-self: center;
 }
 
+
 section {
   display: flex;
   justify-content: space-between;
@@ -134,23 +136,26 @@ button:hover {
   background-color: var(--light-pink);
 }
 
-.container {
-  position: relative;
-  /* top: 7rem; */
-}
-
 /* That way button */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 23%;
+  margin-top: 1rem;
+  }
+
 .border2 {
-  position: absolute;
+  /* position: absolute; */
   background-color: var(--pink);
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 7% 50%);
   height: 5rem;
   width: 18rem;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 2rem;
+  margin-right: 2rem;
 }
 
 .shape2 {
@@ -162,6 +167,8 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
+
+/* RESPONSIVE */
 
 @media screen and (max-width: 1240px) {
   main {
@@ -338,6 +345,11 @@ button:hover {
   .shape2 {
     width: 13.5rem;
     height: 3rem;
+  }
+
+  .container{
+    margin-top: 0;
+    height: 15%;
   }
 }
 
