@@ -409,6 +409,7 @@ button:hover {
   .keyboard {
     justify-content: center;
     margin-bottom: 2rem;
+    width: 100%;
   }
 
   button {
@@ -464,7 +465,7 @@ button:hover {
     height: 13rem;
   }
 
-  .keyboard{
+  .keyboard {
     gap: 0.5rem;
   }
 
@@ -474,7 +475,7 @@ button:hover {
     font-size: 23px;
   }
 
-  .button-container{
+  .button-container {
     margin-bottom: 2rem;
   }
 }
