@@ -85,7 +85,6 @@ main {
   justify-self: center;
 }
 
-
 section {
   display: flex;
   justify-content: space-between;
@@ -137,13 +136,13 @@ button:hover {
 }
 
 /* That way button */
-.container{
+.container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 23%;
   margin-top: 1rem;
-  }
+}
 
 .border2 {
   /* position: absolute; */
@@ -347,7 +346,7 @@ button:hover {
     height: 3rem;
   }
 
-  .container{
+  .container {
     margin-top: 0;
     height: 15%;
   }
@@ -371,5 +370,9 @@ button:hover {
     width: 9.5rem;
     height: 7.5rem;
     font-size: 23px;
+  }
+
+  .border2 {
+    margin-bottom: 2rem;
   }
 }
